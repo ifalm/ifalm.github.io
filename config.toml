@@ -1,6 +1,7 @@
 baseURL = "https://ifalm.github.io/"
 languageCode = "en-us"
 title = "My GIS Portfolio"
+theme = ""
 
 [params]
   author = "Inês Almiro"
