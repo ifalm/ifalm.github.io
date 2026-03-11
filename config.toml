@@ -1,13 +1,12 @@
 baseURL = "https://ifalm.github.io/"
 languageCode = "en-us"
 title = "My GIS Portfolio"
-theme = "PaperMod"
 
 [params]
-  author = "Your Name"
+  author = "Inês Almiro"
   tagline = "GIS • Remote Sensing • Geospatial Analysis"
-  defaultTheme = "auto"
-  ShowShareButtons = false
-  ShowReadingTime = false
-  ShowBreadCrumbs = true
-  ShowPostNavLinks = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

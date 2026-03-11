@@ -3,14 +3,16 @@
 <h1>{{ .Title }}</h1>
 
 <ul>
-  {{ range .Pages }}
-    <li>
-      <a href="{{ .RelPermalink }}">
-        <strong>{{ .Title }}</strong>
-      </a>
-      <p>{{ .Params.summary }}</p>
-    </li>
-  {{ end }}
+{{ range .Pages }}
+  <li style="margin-bottom: 2rem;">
+    <img src="{{ .Params.image }}" width="300">
+    <br>
+    <a href="{{ .RelPermalink }}">
+      <strong>{{ .Title }}</strong>
+    </a>
+    <p>{{ .Params.summary }}</p>
+  </li>
+{{ end }}
 </ul>
 
 {{ end }}
