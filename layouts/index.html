@@ -1,0 +1,17 @@
+{{ define "main" }}
+
+<h2>Featured GIS Projects</h2>
+
+<ul>
+{{ range where .Site.RegularPages "Section" "projects" }}
+  <li>
+    <a href="{{ .RelPermalink }}"><strong>{{ .Title }}</strong></a>
+    <p>{{ .Params.summary }}</p>
+  </li>
+{{ end }}
+</ul>
+
+<h2>About Me</h2>
+<p>I am a GIS professional focused on spatial analysis, remote sensing, and geospatial visualization.</p>
+
+{{ end }}

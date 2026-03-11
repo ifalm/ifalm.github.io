@@ -1,0 +1,13 @@
+baseURL = "https://ifalm.github.io/gis-portfolio/"
+languageCode = "en-us"
+title = "My GIS Portfolio"
+theme = "PaperMod"
+
+[params]
+  author = "Your Name"
+  tagline = "GIS • Remote Sensing • Geospatial Analysis"
+  defaultTheme = "auto"
+  ShowShareButtons = false
+  ShowReadingTime = false
+  ShowBreadCrumbs = true
+  ShowPostNavLinks = true
