@@ -1,17 +1,83 @@
 {{ define "main" }}
 
-<h2>Featured GIS Projects</h2>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-badge">PORTFOLIO</div>
+  <h1 class="hero-title">GIS, Remote Sensing<br><span class="accent">&amp; Spatial Data Science</span></h1>
+  <p class="hero-sub">Applying geospatial analysis and data science to uncover spatial patterns and address complex spatial challenges.</p>
+  <a href="/projects/" class="hero-btn">View Projects →</a>
+</section>
 
-<ul>
-{{ range where .Site.RegularPages "Section" "projects" }}
-  <li>
-    <a href="{{ .RelPermalink }}"><strong>{{ .Title }}</strong></a>
-    <p>{{ .Params.summary }}</p>
-  </li>
-{{ end }}
-</ul>
+<!-- STATIC MAP STRIP -->
+<div class="map-strip">
+  <div id="hero-map"></div>
+  <div class="map-label">// PORTUGAL</div>
+</div>
 
-<h2>About Me</h2>
-<p>I am a GIS professional focused on spatial analysis, remote sensing, and geospatial visualization.</p>
+<!-- ABOUT -->
+<section class="about-section">
+  <div class="about-inner">
+    <span class="section-tag">// ABOUT</span>
+    <h2>About Me</h2>
+    <p>I am a GIS professional focused on geospatial analysis, remote sensing, geospatial visualization, and data science. With more than 10 years of experience, I have an academic background in Biology and Environmental Management.</p>
+    <p>While working in environmental consulting, I pursued a master’s degree in GIS in order to expand my competencies and develop the necessary skills and technical expertise that allow me to address real-world challenges by taking a geospatial approach and support data-informed decision-making.</p>
+    <p>Recently, I have been expanding my skills in Python, SQL and machine learning, driven by a strong interest in the potential of programming and automation for geospatial and remote sensing applications.</p>
+    <p>I am interested in areas such as climate resilience, sustainable development, risk assessment, precision agriculture, agroecology and environmental protection.</p>
+    <p>This portfolio features a sample of my professional and academic work and experiences.</p>
+    <div class="skills-row">
+      <span class="skill-pill">Spatial Analysis</span>
+      <span class="skill-pill">Remote Sensing</span>
+      <span class="skill-pill">Geospatial Visualization</span>
+      <span class="skill-pill">Python</span>
+      <span class="skill-pill">QGIS</span>
+      <span class="skill-pill">Google Earth Engine</span>
+    </div>
+  </div>
+</section>
 
+<!-- PROJECTS -->
+<section class="projects-section">
+  <div class="section-header">
+    <span class="section-tag">// WORK</span>
+    <h2>Featured Projects</h2>
+  </div>
+  <div class="cards-grid">
+    {{ range where .Site.RegularPages "Section" "projects" }}
+    <article class="project-card">
+      {{ if .Params.image }}
+      <div class="card-image">
+        <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy"/>
+        <div class="card-image-overlay"></div>
+      </div>
+      {{ end }}
+      <div class="card-body">
+        <div class="card-tags">
+          {{ range .Params.tags }}<span class="tag">{{ . }}</span>{{ end }}
+        </div>
+        <h3 class="card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p class="card-summary">{{ .Params.summary }}</p>
+        <a href="{{ .RelPermalink }}" class="card-link">Explore project <span class="arr">→</span></a>
+      </div>
+    </article>
+    {{ end }}
+  </div>
+</section>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  const map = L.map('hero-map', {
+    zoomControl: false,
+    attributionControl: false,
+    dragging: false,
+    scrollWheelZoom: false,
+    doubleClickZoom: false,
+    touchZoom: false,
+    keyboard: false
+  }).setView([39.6, -8.0], 7);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+    maxZoom: 19
+  }).addTo(map);
+</script>
 {{ end }}

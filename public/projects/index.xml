@@ -15,5 +15,12 @@
       <guid>http://localhost:1313/projects/land-cover-classification/</guid>
       <description>Supervised classification using Sentinel-2 imagery and Random Forest.</description>
     </item>
+    <item>
+      <title>Tree coverage</title>
+      <link>http://localhost:1313/projects/tree-coverage/</link>
+      <pubDate>Thu, 26 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/tree-coverage/</guid>
+      <description>Supervised classification using Sentinel-2 imagery and Random Forest.</description>
+    </item>
   </channel>
 </rss>

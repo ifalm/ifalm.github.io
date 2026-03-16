@@ -1,8 +1,19 @@
 {{ define "main" }}
-
-<h1>{{ .Title }}</h1>
-<p><em>{{ .Params.summary }}</em></p>
-
-{{ .Content }}
-
+<article class="project-single">
+  <span class="section-tag">// PROJECT</span>
+  <h1>{{ .Title }}</h1>
+  <div class="project-meta">
+    <span>{{ .Date.Format "January 2006" }}</span>
+    {{ with .Params.summary }}<span>{{ . }}</span>{{ end }}
+  </div>
+  {{ if .Params.tags }}
+  <div class="card-tags" style="margin-bottom:1.5rem;">
+    {{ range .Params.tags }}<span class="tag">{{ . }}</span>{{ end }}
+  </div>
+  {{ end }}
+  {{ with .Params.image }}
+  <img class="hero-img" src="{{ . }}" alt="{{ $.Title }}"/>
+  {{ end }}
+  {{ .Content }}
+</article>
 {{ end }}

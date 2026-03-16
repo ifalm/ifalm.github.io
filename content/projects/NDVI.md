@@ -1,15 +1,15 @@
 ---
-title: "Land Cover Classification"
-date: 2026-02-26
+title: "NDVI Time-series Analysis"
+date: 2026-03-20
 draft: false
-summary: "Supervised classification using Sentinel-2 imagery and Random Forest."
+summary: "NDVI time-series analysis using Sentinel-2 imagery."
 image: "/images/NDVI_sem_leg_.png"
 featured: true
 ---
 
 ## Overview
 
-This project analyzes land cover using Sentinel-2 imagery.
+This project analyzes NDVI time evolution in the city of Lisbon.
 
 ## Tools Used
 
@@ -35,4 +35,4 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 ## Results
 
-The classification achieved 87% overall accuracy.
+The analysis resulted in a decrase in NDVI values.

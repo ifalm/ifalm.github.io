@@ -1,5 +1,5 @@
 ---
-title: "Land Cover Classification"
+title: "Tree coverage"
 date: 2026-02-26
 draft: false
 summary: "Supervised classification using Sentinel-2 imagery and Random Forest."

@@ -3,7 +3,7 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tags · IA | GIS Portfolio</title>
+  <title>NDVI · IA | GIS Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet"/>
   <style>
@@ -115,24 +115,6 @@
     }
 
      
-    .about-section { padding: 5rem 3rem; }
-    .about-inner { max-width: 860px; margin: 0 auto; text-align: center; }
-    .about-inner h2 {
-      font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800;
-      color: var(--text-bright); letter-spacing: -.01em; margin-bottom: 1rem;
-    }
-    .about-inner p { color: var(--text-dim); font-size: .95rem; font-weight: 300; line-height: 1.85; max-width: 600px; margin: 0 auto 2.5rem; }
-    .skills-row { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; }
-    .skill-pill {
-      font-family: var(--mono); font-size: .72rem; color: var(--text);
-      letter-spacing: .04em; padding: .5rem 1.2rem;
-      background: var(--bg3); border: 1px solid var(--border);
-      border-radius: 99px; transition: border-color .2s, color .2s;
-    }
-    .skill-pill:hover { border-color: var(--accent-lit); color: var(--accent-lit); }
-
-
-     
     .projects-section { padding: 5rem 3rem; background: var(--bg2); border-bottom: 1px solid var(--border); }
     .section-header { margin-bottom: 2.5rem; text-align: center; }
     .section-header h2 {
@@ -169,6 +151,23 @@
     .card-link { font-family: var(--mono); font-size: .72rem; color: var(--accent-lit); display: inline-flex; align-items: center; gap: .3rem; }
     .card-link .arr { transition: transform .2s; }
     .card-link:hover .arr { transform: translateX(4px); }
+
+     
+    .about-section { padding: 5rem 3rem; }
+    .about-inner { max-width: 860px; margin: 0 auto; text-align: center; }
+    .about-inner h2 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800;
+      color: var(--text-bright); letter-spacing: -.01em; margin-bottom: 1rem;
+    }
+    .about-inner p { color: var(--text-dim); font-size: .95rem; font-weight: 300; line-height: 1.85; max-width: 600px; margin: 0 auto 2.5rem; }
+    .skills-row { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; }
+    .skill-pill {
+      font-family: var(--mono); font-size: .72rem; color: var(--text);
+      letter-spacing: .04em; padding: .5rem 1.2rem;
+      background: var(--bg3); border: 1px solid var(--border);
+      border-radius: 99px; transition: border-color .2s, color .2s;
+    }
+    .skill-pill:hover { border-color: var(--accent-lit); color: var(--accent-lit); }
 
      
     .site-footer { border-top: 1px solid var(--border); padding: 1.5rem 3rem; }
@@ -233,19 +232,41 @@
   </a>
   <nav class="site-nav">
     <a href="/"          class="">Home</a>
-    <a href="/projects/" class="">Projects</a>
+    <a href="/projects/" class="active">Projects</a>
   </nav>
 </header>
 
 <main>
   
-
-<h1>Tags</h1>
-
+<article class="project-single">
+  <span class="section-tag">// PROJECT</span>
+  <h1>NDVI</h1>
+  <div class="project-meta">
+    <span>February 2026</span>
+    <span>Supervised classification using Sentinel-2 imagery and Random Forest.</span>
+  </div>
+  
+  
+  <img class="hero-img" src="/images/NDVI_sem_leg_.png" alt="NDVI"/>
+  
+  <h2 id="overview">Overview</h2>
+<p>This project analyzes land cover using Sentinel-2 imagery.</p>
+<h2 id="tools-used">Tools Used</h2>
 <ul>
-
+<li>QGIS</li>
+<li>Google Earth Engine</li>
+<li>Python (rasterio, numpy)</li>
 </ul>
+<h2 id="interactive-map">Interactive Map</h2>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="results">Results</h2>
+<p>The classification achieved 87% overall accuracy.</p>
 
+</article>
 
 </main>
 
