@@ -3,22 +3,22 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>{{ if .IsHome }}IA | GIS Portfolio{{ else }}{{ .Title }} · IA | GIS Portfolio{{ end }}</title>
+  <title>{{ if .IsHome }}IA | Portfolio{{ else }}{{ .Title }} · IA | Portfolio{{ end }}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet"/>
   <style>
     :root {
       --bg:         #080c12;
       --bg2:        #0d1320;
-      --bg3:        #0f1f14;
-      --border:     #1a3020;
-      --accent:     #2d7a45;
-      --accent-lit: #3B9755;
-      --accent-dim: rgba(59,151,85,.12);
-      --accent-bdr: rgba(59,151,85,.3);
-      --text:       #b0c8b8;
-      --text-dim:   #4a6a55;
-      --text-bright:#e8f2ec;
+      --bg3:        #111d0e;
+      --border:     #1e3018;
+      --accent:     #4e9e3a;
+      --accent-lit: #69C850;
+      --accent-dim: rgba(105,200,80,.12);
+      --accent-bdr: rgba(105,200,80,.3);
+      --text:       #c2d4b8;
+      --text-dim:   #6a8a5a;
+      --text-bright:#f0f5ec;
       --mono:       'Space Mono', monospace;
       --sans:       'Lato', sans-serif;
       --r:          8px;
@@ -74,7 +74,7 @@
       pointer-events: none;
     }
     .hero-badge {
-      font-family: var(--mono); font-size: .68rem; color: var(--accent-lit);
+      font-family: var(--mono); font-size: .85rem; color: var(--accent-lit);
       letter-spacing: .22em; margin-bottom: 1.5rem;
       display: flex; align-items: center; justify-content: center; gap: .6rem;
       position: relative;
@@ -110,7 +110,7 @@
 
     /* SHARED */
     .section-tag {
-      font-family: var(--mono); font-size: .68rem; color: var(--accent-lit);
+      font-family: var(--mono); font-size: .85rem; color: var(--accent-lit);
       letter-spacing: .2em; display: block; margin-bottom: .5rem;
     }
 
@@ -118,10 +118,10 @@
     .about-section { padding: 5rem 3rem; }
     .about-inner { max-width: 860px; margin: 0 auto; text-align: center; }
     .about-inner h2 {
-      font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800;
+      font-size: clamp(1.2rem, 2vw, 2rem); font-weight: 800;
       color: var(--text-bright); letter-spacing: -.01em; margin-bottom: 1rem;
     }
-    .about-inner p { color: var(--text-dim); font-size: .95rem; font-weight: 300; line-height: 1.85; max-width: 600px; margin: 0 auto 2.5rem; }
+    .about-inner p { color: var(--text); font-size: .95rem; font-weight: 300; line-height: 1.85; max-width: 600px; margin: 0 auto 1.1rem; }
     .skills-row { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; }
     .skill-pill {
       font-family: var(--mono); font-size: .72rem; color: var(--text);
@@ -244,7 +244,7 @@
 <footer class="site-footer">
   <div class="footer-inner">
     <span class="footer-copy">© {{ now.Year }} {{ .Site.Params.author | default .Site.Title }}</span>
-    <span class="footer-tag">// GIS PORTFOLIO</span>
+    <span class="footer-tag">// PORTFOLIO</span>
   </div>
 </footer>
 
