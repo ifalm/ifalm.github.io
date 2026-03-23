@@ -12,13 +12,13 @@
       --bg2:        #0d1320;
       --bg3:        #111d0e;
       --border:     #1e3018;
-      --accent:     #4e9e3a;
-      --accent-lit: #69C850;
-      --accent-dim: rgba(105,200,80,.12);
-      --accent-bdr: rgba(105,200,80,.3);
-      --text:       #c2d4b8;
-      --text-dim:   #6a8a5a;
-      --text-bright:#f0f5ec;
+      --accent:     #3a9e50;
+      --accent-lit: #52C464;
+      --accent-dim: rgba(82,196,100,.12);
+      --accent-bdr: rgba(82,196,100,.3);
+      --text:       #bdd4c4;
+      --text-dim:   #5a8068;
+      --text-bright:#edf5f0;
       --mono:       'Space Mono', monospace;
       --sans:       'Lato', sans-serif;
       --r:          8px;
@@ -122,7 +122,7 @@
       color: var(--text-bright); letter-spacing: -.01em; margin-bottom: 1rem;
     }
     .about-inner p { color: var(--text); font-size: .95rem; font-weight: 300; line-height: 1.85; max-width: 600px; margin: 0 auto 1.1rem; }
-    .skills-row { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; }
+    .skills-row { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; margin-top: 1.5rem; }
     .skill-pill {
       font-family: var(--mono); font-size: .72rem; color: var(--text);
       letter-spacing: .04em; padding: .5rem 1.2rem;
@@ -133,7 +133,7 @@
 
 
     /* PROJECTS */
-    .projects-section { padding: 5rem 3rem; background: var(--bg2); border-bottom: 1px solid var(--border); }
+    .projects-section { padding: 5rem 3rem; background: var(--bg2); border-bottom: 1px solid var(--border); text-align: center; }
     .section-header { margin-bottom: 2.5rem; text-align: center; }
     .section-header h2 {
       font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800;
@@ -142,6 +142,7 @@
     .cards-grid {
       display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 1.5rem; max-width: 1100px; margin: 0 auto;
+      justify-items: center;
     }
     .project-card {
       background: var(--bg3); border: 1px solid var(--border); border-radius: var(--r);
