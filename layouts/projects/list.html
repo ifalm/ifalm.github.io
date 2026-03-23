@@ -1,0 +1,28 @@
+{{ define "main" }}
+<section class="projects-section" style="min-height:80vh;">
+  <div class="section-header">
+    <span class="section-tag">// PROJECTS</span>
+    <h2>All Projects</h2>
+  </div>
+  <div class="cards-grid">
+    {{ range .Pages }}
+    <article class="project-card">
+      {{ if .Params.image }}
+      <div class="card-image">
+        <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy"/>
+        <div class="card-image-overlay"></div>
+      </div>
+      {{ end }}
+      <div class="card-body">
+        <div class="card-tags">
+          {{ range .Params.tags }}<span class="tag">{{ . }}</span>{{ end }}
+        </div>
+        <h3 class="card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p class="card-summary">{{ .Params.summary }}</p>
+        <a href="{{ .RelPermalink }}" class="card-link">Explore project <span class="arr">→</span></a>
+      </div>
+    </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
